@@ -51,10 +51,11 @@ the page where data of zipcode is present
 ![blog1](https://user-images.githubusercontent.com/38830975/110507238-a6f65f00-8121-11eb-8c36-7667499f4998.png)
 ![blog2](https://user-images.githubusercontent.com/38830975/110507252-a8c02280-8121-11eb-8b29-9788751ee8b4.png)
 
-<h5>#Result page<h5>
+<h5>#Instructions<h5>
  1) open folder db 
  2) unzip file zip1 
  3) upload to mysql 
+ 4) run through mysql and server (Recomeded xampp)
   
   
  
