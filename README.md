@@ -32,7 +32,7 @@ Speed And Connections
 
 Data is up to date till March 2021, Data was derived from publicly accessible plan data from more than 2,000 internet service providers. If the promotional rate is the only established or advertised price for a plan. Both plans provide only internet access. Plans that include TV and/or phone (Double, Triple Play, etc.) are also considered.though only demo data is given if require all data contact though email musawar.soomro@yahoo.com
 
-Data consist of every U.S. ZIP Codesof 41,692
+Data consist of every U.S. ZIP Codes of 41,692
 
 <h3>Quality Assurance (QA)</h3>
 
