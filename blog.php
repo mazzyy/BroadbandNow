@@ -119,6 +119,43 @@ if(isset($_GET['zipcode'])){
 	width: 55%;
 	
 }
+.zipcode {
+  text-align: center;
+  font: bold  Sans-Serif;
+  padding: 40px 0;
+
+  color: white;
+  text-shadow: 0 1px 0 #ccc,
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+}
+
+.otto {
+  background: #0e8dbc;
+  color: white;
+  text-shadow: 0 1px 0 #ccc,
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+}
+
 
 </style>
 <body>
@@ -140,15 +177,15 @@ if(isset($_GET['zipcode'])){
 					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
 						<ul class="nav navbar-nav menu_nav ml-auto">
 							<li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
-							
-							<li class="nav-item submenu dropdown">
+							<li class="nav-item active"><a class="nav-link" href="index.html">About Us</a></li>
+							<!-- <li class="nav-item submenu dropdown">
 								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
 								 aria-expanded="false">All Proviers</a>
 								<ul class="dropdown-menu">
 									<li class="nav-item"><a class="nav-link" href="blog.html">provider1</a></li>
 									<li class="nav-item"><a class="nav-link" href="single-blog.html">Provider2</a></li>
 								</ul>
-							</li>
+							</li> -->
 							
 							
 						</ul>
@@ -183,13 +220,13 @@ if(isset($_GET['zipcode'])){
                     <div class="col-8">
                     <?php if ($state->num_rows > 0) {
                 while(($state = $state->fetch_assoc()) !== null){
-                echo  "<h1 class='text-dark'><small style='font-size:20px'>Services providers in</small><br>".$state['primary_city'].','. $state['state']." <b>$zipCode </b>"." </h1>";
+                echo  "<h1 class='text-dark'><small style='font-size:20px'>Services providers in</small><br>".$state['primary_city'].','. $state['state']." <b class='zipcode' style='-webkit-text-stroke: 0.1px white;' >$zipCode </b>"." </h1>";
               
                     break;
                 }
             }else{
 
-                echo  "<h1 class='text-dark'><small style='font-size:20px'></small><br>No Providers Found On <b>$zipCode </b>"." </h1>";
+                echo  "<h1 class='text-dark'><small style='font-size:20px'></small><br>No Providers Found On <b style='-webkit-text-stroke: 0.1px white;' >$zipCode </b>"." </h1>";
               
             }
                 ?>
@@ -248,7 +285,7 @@ if(isset($_GET['zipcode'])){
           <div class="row pt-3 rounded" >
               <!-- header -->
                     <div class="rounded col-12 bg-light w-100 p-0 m-0 " style="border-left: 1.5px solid #ff9600;border-right: 1.5px solid #ff9600; background: linear-gradient(90deg,#ffba00 0%, #ff6c00 100%)!important;">
-                        <h3 class=" border p-0 m-0 boxheader"> <span style="" class="border-right   bold text-light">#<?php echo $i; $i++; ?>&nbsp;</span>
+                        <h3 class="p-0 m-0 boxheader"> <span style="" class="border-right   bold text-light">#<?php echo $i; $i++; ?>&nbsp;</span>
                             <span class="bold"><?php echo  $name; ?></span>
                             <span class="float-right pt-2"style="font-size:70%; "> <strong><?php echo $availability."%"; ?></strong> availability </span>
                         </h3>
