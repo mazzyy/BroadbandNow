@@ -1,0 +1,17 @@
+[20-Apr-2021 13:12:47 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/onestop/broadbandmovers/blog.php on line 8
+[20-Apr-2021 13:13:09 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/onestop/broadbandmovers/blog.php on line 8
+[20-Apr-2021 13:19:53 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/onestop/broadbandmovers/info.php on line 8
+[21-Apr-2021 07:16:12 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home2/onestop/broadbandmovers/blog.php:293
+Stack trace:
+#0 {main}
+  thrown in /home2/onestop/broadbandmovers/blog.php on line 293
+[26-Apr-2021 08:42:44 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home2/onestop/broadbandmovers/states.php:290
+Stack trace:
+#0 {main}
+  thrown in /home2/onestop/broadbandmovers/states.php on line 290
+[26-Apr-2021 08:45:42 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on null in /home2/onestop/broadbandmovers/statesProviders.php:283
+Stack trace:
+#0 {main}
+  thrown in /home2/onestop/broadbandmovers/statesProviders.php on line 283
+[27-Apr-2021 10:18:07 America/Chicago] PHP Parse error:  syntax error, unexpected ''"> '' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';' in /home2/onestop/broadbandmovers/states.php on line 303
+[27-Apr-2021 10:18:23 America/Chicago] PHP Parse error:  syntax error, unexpected ''"> '' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';' in /home2/onestop/broadbandmovers/states.php on line 303

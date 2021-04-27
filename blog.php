@@ -2,10 +2,10 @@
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $dbname = "zip1";
+     $dbname = "onestop_broadbandmovers";
     
     // Create connection
-    $conn = mysqli_connect($servername, $username, $password, $dbname);
+    $conn = mysqli_connect($servername, $username,$password,  $dbname);
 
     // Check connection
     if (!$conn) {
@@ -16,7 +16,10 @@ if(isset($_GET['zipcode'])){
      $zipCode=(int)$_GET['zipcode'];
 
 }
-    $select_deparment = "SELECT * FROM `highspeedinternet` INNER JOIN zip ON zip.zipcode = highspeedinternet.zip_code WHERE highspeedinternet.zip_code= $zipCode ORDER BY `highspeedinternet`.`availability` DESC";
+        $select_deparment = "SELECT * FROM `highspeedinternet` INNER JOIN zip ON zip.zipcode = highspeedinternet.zip_code
+        INNER JOIN plans ON plans.name = highspeedinternet.name
+        WHERE highspeedinternet.zip_code= $zipCode ORDER BY plans.priority DESC";
+    // $select_deparment = "SELECT * FROM `highspeedinternet` INNER JOIN zip ON zip.zipcode = highspeedinternet.zip_code WHERE highspeedinternet.zip_code= $zipCode ORDER BY `highspeedinternet`.`availability` DESC";
     $department_result = mysqli_query($conn, $select_deparment);
     
     $state = "SELECT * FROM `highspeedinternet` INNER JOIN zip ON zip.zipcode = highspeedinternet.zip_code WHERE highspeedinternet.zip_code= $zipCode ORDER BY `highspeedinternet`.`availability` DESC";
@@ -43,7 +46,7 @@ if(isset($_GET['zipcode'])){
     <!-- meta character set -->
     <meta charset="UTF-8">
     <!-- Site Title -->
-    <title>Karma Shop</title>
+    <title>Available Providers</title>
     <!--
 			CSS
 			============================================= -->
@@ -112,9 +115,9 @@ if(isset($_GET['zipcode'])){
     color:#ff7101;
     text-decoration:none;
     }
-.banner-area{
+/* .banner-area{
 	background-attachment:fixed ;
-	}
+	} */
 .category-area{
 	width: 55%;
 	
@@ -155,61 +158,72 @@ if(isset($_GET['zipcode'])){
                0 10px 10px rgba(0,0,0,.2),
                0 20px 20px rgba(0,0,0,.15);
 }
+.nav-btn:hover{
+	/* background: #354962; */
+	color: #FFFFFF;
+
+	border-bottom: 1.5px solid rgb(73, 73, 73);
+	/* text-shadow: #2A3D4E 1px 1px,#2A3D4E -0px 0px,#2A3D4E -1px 1px,#2A3D4E -2px 2px,#2A3D4E -3px 3px,#2A3D4E -4px 4px,#2A3D4E -5px 5px,#2A3D4E -6px 6px,#2A3D4E -7px 7px,#2A3D4E -8px 8px,#2A3D4E -9px 9px; */
+/* just copy this */
+}
+
 
 
 </style>
 <body>
 
     <!-- Start Header Area -->
-	<header class="header_area sticky-header">
-		<div class="main_menu">
-        <nav class="navbar navbar-expand-lg navbar-light main_box">
-				<div class="container">
-					<!-- Brand and toggle get grouped for better mobile display -->
+    <div class="header_area   bold shadow sticky"   >
+		<div class="">
+			<nav class="navbar navbar-expand-lg navbar-light bg-light" style="  background-image: linear-gradient(to right, #ffffff , #ffffff, #ffffff ); ">
+				<div class="container-fluid">
+				
+				<div class="pl-5">
 					<a class="navbar-brand logo_h" href="index.html"><img src="img/logo.png" alt=""></a>
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-					 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<!-- Collect the nav links, forms, and other content for toggling -->
-					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
-						<ul class="nav navbar-nav menu_nav ml-auto">
-							<li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
-							<li class="nav-item active"><a class="nav-link" href="index.html">About Us</a></li>
-							<!-- <li class="nav-item submenu dropdown">
-								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-								 aria-expanded="false">All Proviers</a>
-								<ul class="dropdown-menu">
-									<li class="nav-item"><a class="nav-link" href="blog.html">provider1</a></li>
-									<li class="nav-item"><a class="nav-link" href="single-blog.html">Provider2</a></li>
-								</ul>
-							</li> -->
-							
-							
-						</ul>
-						<ul class="nav navbar-nav navbar-right">
-							
-							<li class="nav-item">
-								<button class="search"><span class="lnr lnr-magnifier" id="search"></span></button>
-							</li>
-						</ul>
-					</div>
+		        </div>
+		
+							<div class="pr-5">
+								<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+								aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+								   <span class="icon-bar"></span>
+								   <span class="icon-bar"></span>
+								   <span class="icon-bar"></span>
+							   </button>
+			   
+							   
+							   <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+								   <ul class="nav navbar-nav menu_nav ml-auto" >
+								    	<li class="nav-item active "><a class="nav-link shadow-bottom nav-btn" href="index.html" style="font-size: 20px!important;"><b>Home</b></a></li>
+									   <li class="nav-item active  	" ><a class="nav-link nav-btn " href="aboutus.php"  style="font-size: 20px!important;"><b>About Us</b></a></li>
+		                               <li class="nav-item active  	" ><a class="nav-link nav-btn " href="providers.php"  style="font-size: 20px!important;"><b>Providers</b></a></li>
+									   <li class="nav-item active  	" ><a class="nav-link nav-btn " href="states.php"  style="font-size: 20px!important;"><b>States</b></a></li>
+							   
+									   
+									   
+								   </ul>
+								   <ul class="nav navbar-nav navbar-right">
+									   
+									   <li class="nav-item">
+										   <button class="search"><span class="lnr lnr-magnifier" id="search"></span></button>
+									   </li>
+								   </ul>
+							   </div>
+								
+							</div>
 				</div>
 			</nav>
 		</div>
 		<div class="search_input" id="search_input_box">
 			<div class="container">
-
 				<form class="d-flex justify-content-between" action="blog.php">
-					<input name="zipcode" type="text" class="form-control" id="search_input" placeholder="Search Here">
+					<input  name="zipcode" type="text" class="form-control" id="search_input" placeholder="Search Here" >
 					<button type="submit" class="btn"></button>
 					<span class="lnr lnr-cross" id="close_search" title="Close Search"></span>
 				</form>
 			</div>
 		</div>
-	</header>
+		
+	</div>
 	<!-- End Header Area -->
 
     <!-- Start Banner Area -->
@@ -226,7 +240,9 @@ if(isset($_GET['zipcode'])){
                 }
             }else{
 
-                echo  "<h1 class='text-dark'><small style='font-size:20px'></small><br>No Providers Found On <b style='-webkit-text-stroke: 0.1px white;' >$zipCode </b>"." </h1>";
+             
+                echo  "<h1 class='text-dark '><small style='font-size:20px'></small><br>Unable to locate you <b class='zipcode' style='-webkit-text-stroke: 0.1px white;' >$zipCode </b>"." </h1>";
+                echo '<a href="tel:8889101593"  class=" btn btn-warning btn-lg " style="border-radius: 20px !important;"><b class="text-light"><i class="fa fa-phone" aria-hidden="true"></i> &nbsp;CALL NOW   </a></b>';
               
             }
                 ?>
@@ -281,7 +297,10 @@ if(isset($_GET['zipcode'])){
                             $availability=$row['availability'];
                             $connections=$row['connections'];
                             $speed=$row['speed'];
-                        ?> 
+                            $number=$row['number'];
+                            $bundles=$row['bundles'];
+                            $priority=$row['priority'];
+                        ?>  
           <div class="row pt-3 rounded" >
               <!-- header -->
                     <div class="rounded col-12 bg-light w-100 p-0 m-0 " style="border-left: 1.5px solid #ff9600;border-right: 1.5px solid #ff9600; background: linear-gradient(90deg,#ffba00 0%, #ff6c00 100%)!important;">
@@ -299,7 +318,7 @@ if(isset($_GET['zipcode'])){
                                         <!-- <img class="w-100" src="img/providers/spectrum.png" alt=""> -->
                                         <?php
                                       
-                                         if($name=="Spectrum" || $name=="RCN" || $name=="Verizon"  || $name=="Viasat" || $name=="HughesNet" || $name=="Starry Internet" || $name=="BarrierFree"  || $name=="AT&T" || $name=="AT&amp;T" || $name=="CenturyLink" || $name=="Xfinity" || $name=="DIRECTV" || $name=="AT&TTV")
+                                         if($name=="Spectrum" || $name=="RCN" || $name=="Verizon"  || $name=="Viasat" || $name=="HughesNet" || $name=="Starry Internet" || $name=="BarrierFree"  || $name=="AT&T" || $name=="AT&amp;T" || $name=="CenturyLink" || $name=="Xfinity" || $name=="DIRECTV" || $name=="AT&TTV" || $name=="Frontier" )
                                          {
                                             
                                             echo  '<div  class="col-xs-1	col-sm-1	col-md-2	col-lg-4">';
@@ -314,7 +333,7 @@ if(isset($_GET['zipcode'])){
                                 
                                 ?>
                                 </div>
-                                <div class="col-6">
+                                <div class="col-4">
                                 
                                 
                                             <div class=" pt-3 container-fluid" style="margin-top: 20px; margin-bottom: 20px;">
@@ -347,9 +366,12 @@ if(isset($_GET['zipcode'])){
                                         </div>
                                         <!-- <p>Viasat provides  <a class="bs-tooltip" href="/provider/satellite" title="Click to view all Satellite Internet internet providers.">Satellite Internet</a> and <a class="bs-tooltip" href="/provider/phone" title="Click to view all Phone internet providers.">Phone</a> services in New York, <abbr title="New York">NY</abbr>. -->
                                     </p></div>
-                                        <div class="col-2 pt-3">
-                                            <a href="" class=" btn btn-warning btn-lg " style="border-radius: 20px !important;">plans &rtrif;</a>
-                                            
+                                        <div class="col-4 pt-3">
+                                        
+                                            <a href="<?php echo 'tel:'.$number ?>" class=" btn btn-warning btn-lg " style="border-radius: 20px !important;"><b class="text-light"><i class="fa fa-phone" aria-hidden="true"></i> &nbsp;<?php echo "CALL NOW" ?> </a></b>
+                                           <?php if( $priority==1){ ?>
+                                            <a href="/<?php if($name=="AT&TTV" ){ echo 'spectrum.php?provider=ATandTTV'; }else if($name=="AT&T"){ echo 'spectrum.php?provider=ATandT'; } else{ echo 'spectrum.php?provider='.$name;} ?>" class=" btn btn-warning btn-lg " style="border-radius: 20px !important;" target="_blank" >plans &rtrif;</a>
+                                          <?php }?>
                                         </div>
                                </div>
                              
@@ -371,16 +393,16 @@ if(isset($_GET['zipcode'])){
     <!--================Blog Area =================-->
 
     <!-- start footer Area -->
-    <footer class="footer-area section_gap">
+    	<footer class="footer-area section_gap">
         <div class="container">
-            
-                <div class="col-lg-4  col-md-6 col-sm-6">
+            <div class="row" stle="color:black">
+                <div class="col-4  col-4 col-sm-4">
                     <div class="single-footer-widget">
                         <h6>Newsletter</h6>
                         <p>Stay update with our latest</p>
                         <div class="" id="mc_embed_signup">
 
-                            <form target="_blank" novalidate="true" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="form-inline">
+                            <form target="_blank" novalidate="true" action="" method="get" class="form-inline">
 
                                 <div class="d-flex flex-row">
 
@@ -401,13 +423,18 @@ if(isset($_GET['zipcode'])){
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3  col-md-6 col-sm-6">
-                    
-                </div>
-                <div class="col-lg-2 col-md-6 col-sm-6">
-                    
-                </div>
+                <div class="col-lg-4  col-md-4 col-sm-4">
+					<div class="footer__text-widget">
+						<h5></h5>
+						<ul style="list-style: none">
+							<li><a href="aboutus.php">About Us</a></li>
+
+							<li><a href="terms_condictions.php">Privacy &amp; Terms</a></li>
+						</ul>
+					</div>
+				</div>
             </div>
+        </div>
             
         
     </footer>
@@ -417,7 +444,7 @@ if(isset($_GET['zipcode'])){
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
 	 crossorigin="anonymous"></script>
 	<script src="js/vendor/bootstrap.min.js"></script>
-	<script src="js/jquery.ajaxchimp.min.js"></script>
+
 	<script src="js/jquery.nice-select.min.js"></script>
 	<script src="js/jquery.sticky.js"></script>
     <script src="js/nouislider.min.js"></script>

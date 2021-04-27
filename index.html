@@ -62,12 +62,20 @@
     color:#ff7101;
     text-decoration:none;
     }
-.banner-area{
+/* .banner-area{
 	background-attachment:fixed ;
-	}
+	} */
 .category-area{
 	width: 55%;
 	
+}
+.nav-btn:hover{
+	/* background: #354962; */
+	color: #FFFFFF;
+
+	border-bottom: 1.5px solid rgb(73, 73, 73);
+	/* text-shadow: #2A3D4E 1px 1px,#2A3D4E -0px 0px,#2A3D4E -1px 1px,#2A3D4E -2px 2px,#2A3D4E -3px 3px,#2A3D4E -4px 4px,#2A3D4E -5px 5px,#2A3D4E -6px 6px,#2A3D4E -7px 7px,#2A3D4E -8px 8px,#2A3D4E -9px 9px; */
+/* just copy this */
 }
 
 
@@ -75,41 +83,44 @@
 <body>
 
 	<!-- Start Header Area -->
-	<header class="header_area sticky-header">
-		<div class="main_menu">
-			<nav class="navbar navbar-expand-lg navbar-light main_box">
-				<div class="container">
-					<!-- Brand and toggle get grouped for better mobile display -->
+	<div class="header_area   bold shadow"  >
+		<div class="">
+			<nav class="navbar navbar-expand-lg navbar-light bg-light" style="  background-image: linear-gradient(to right, #ffffff , #ffffff, #ffffff ); ">
+				<div class="container-fluid">
+				
+				<div class="pl-5">
 					<a class="navbar-brand logo_h" href="index.html"><img src="img/logo.png" alt=""></a>
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-					 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<!-- Collect the nav links, forms, and other content for toggling -->
-					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
-						<ul class="nav navbar-nav menu_nav ml-auto">
-							<li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
-							<li class="nav-item active"><a class="nav-link" href="aboutus.php">About Us</a></li>
-							<!-- <li class="nav-item submenu dropdown">
-								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-								 aria-expanded="false">All Proviers</a>
-								<ul class="dropdown-menu">
-									<li class="nav-item"><a class="nav-link" href="blog.html">provider1</a></li>
-									<li class="nav-item"><a class="nav-link" href="single-blog.html">Provider2</a></li>
-								</ul>
-							</li> -->
-							
-							
-						</ul>
-						<ul class="nav navbar-nav navbar-right">
-							
-							<li class="nav-item">
-								<button class="search"><span class="lnr lnr-magnifier" id="search"></span></button>
-							</li>
-						</ul>
-					</div>
+		        </div>
+		
+							<div class="pr-5">
+								<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+								aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+								   <span class="icon-bar"></span>
+								   <span class="icon-bar"></span>
+								   <span class="icon-bar"></span>
+							   </button>
+			   
+							   
+							   <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+								   <ul class="nav navbar-nav menu_nav ml-auto" >
+									   <li class="nav-item active "><a class="nav-link shadow-bottom nav-btn" href="index.html" style="font-size: 20px!important;"><b>Home</b></a></li>
+									   <li class="nav-item active  	" ><a class="nav-link nav-btn " href="aboutus.php"  style="font-size: 20px!important;"><b>About Us</b></a></li>
+									   <li class="nav-item active  	" ><a class="nav-link nav-btn " href="providers.php"  style="font-size: 20px!important;"><b>Providers</b></a></li>
+									   <li class="nav-item active  	" ><a class="nav-link nav-btn " href="states.php"  style="font-size: 20px!important;"><b>States</b></a></li>
+									   
+							   
+									   
+									   
+								   </ul>
+								   <ul class="nav navbar-nav navbar-right">
+									   
+									   <li class="nav-item">
+										   <button class="search"><span class="lnr lnr-magnifier" id="search"></span></button>
+									   </li>
+								   </ul>
+							   </div>
+								
+							</div>
 				</div>
 			</nav>
 		</div>
@@ -122,7 +133,9 @@
 				</form>
 			</div>
 		</div>
-	</header>
+		
+	</div>
+		
 	<!-- End Header Area -->
 
 	<!-- start banner Area -->
@@ -132,11 +145,11 @@
 				<div class="col-lg-12">
 					<div class=" owl-carousel">
 						<!-- single-slide -->
-						<div class="row single-slide align-items-center d-flex ">
+						<div class="row  ">
 							<div class="col-lg-5 col-md-6">
 								<div class="banner-content">
-									<h1 class="pl-3 pb-0 mb-0">Search <span style="color: #ff7900;">All<span> </h1>
-									<h1 class="pl-3 ">Proviers</h1>
+									<h1 class="pl-3 pb-0 mb-0">Search <span style="color: #ff7900; text-shadow: 0 0 3px #aaaaaa;">All<span> </h1>
+									<h1 class="pl-3 ">Providers</h1>
 									<p class="pl-4 text-dark" >search top cable, internet and energy providers in your area.</p>
 								     <div class="bg-dark searchbox" >
 									<div >
@@ -160,7 +173,7 @@
 
 								</div>
 							</div>
-							<div class="col-lg-7">
+							<div class="col-lg-7 col-sm-4">
 								<div class="banner-img">
 									<img class="img-fluid" src="img/banner/banner-img.png" alt="">
 								</div>
@@ -182,109 +195,7 @@
 	
 	<!-- USA MAP -->
 
-	<!-- Start category Area -->
-	<center>
-		<h2 class="pt-5">Largest Providers</h2>
-		<section class="category-area">
-			<div class="container">
-				<div class="row justify-content-center">
-					<div class="col-lg-8 col-md-12">
-						<div class="row">
-							<div class="col-lg-8 col-md-8">
-								<div class="single-deal">
-									<div class="overlay"></div>
-									<img class="img-fluid w-100" src="img/ATT.png" alt="">
-									
-									<a class="">
-										<div class="deal-details">
-											<h6 class="deal-title">AT&T Internet and Tv</h6>
-										</div>
-									</a>
-								</div>
-							</div>
-							<div class="col-lg-4 col-md-4">
-								<div class="single-deal">
-									<div class="overlay"></div>
-									<img class="img-fluid w-100" src="img/spectrum.png" alt="">
-									<a  class="i" target="_blank">
-										<div class="deal-details">
-											<h6 class="deal-title">Spectrum</h6>
-										</div>
-									</a>
-								</div>
-							</div>
-							<div class="col-lg-4 col-md-4">
-								<div class="single-deal">
-									<div class="overlay"></div>
-									<img class="img-fluid w-100" src="img/xfinity.png" alt="">
-									<a class="">
-										<div class="deal-details">
-											<h6 class="deal-title">Xfinity</h6>
-										</div>
-									</a>
-								</div>
-							</div>
-							<div class="col-lg-8 col-md-8">
-								<div class="single-deal">
-									<div class="overlay"></div>
-									<img class="img-fluid w-100" src="img/century.png" alt="">
-									<aclass="">
-										<div class="deal-details">
-											<h6 class="deal-title">CenturyLink</h6>
-										</div>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-4">
-						<div class="single-deal">
-							<div class="overlay"></div>
-							<img class="img-fluid w-100" src="img/cox.png" alt="">
-							<a class="">
-								<div class="deal-details">
-									<h6 class="deal-title">Cox Communications</h6>
-								</div>
-							</a>
-						</div>
-					</div>
-					<div class="col-lg-6 col-md-6">
-						<div class="single-deal">
-							<div class="overlay"></div>
-							<img class="img-fluid w-100" src="img/hugenet.png" alt="">
-							<a class="">
-								<div class="deal-details">
-									<h6 class="deal-title">hugenet</h6>
-								</div>
-							</a>
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-3">
-						<div class="single-deal">
-							<div class="overlay"></div>
-							<img class="img-fluid w-100" src="img/visat.png" alt="">
-							<a class="">
-								<div class="deal-details">
-									<h6 class="deal-title">visat<br>-----<br>exede</h6>
-								</div>
-							</a>
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-3">
-						<div class="single-deal">
-							<div class="overlay"></div>
-							<img class="img-fluid w-100" src="img/Frontier.png" alt="">
-							<a class="">
-								<div class="deal-details">
-									<h6 class="deal-title">Frontier Communications</h6>
-								</div>
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-   </center>
+	
 	<!-- End category Area -->
 <div class="container" align="justify">
     <!-- row -->
@@ -481,11 +392,116 @@
 			</div>
 	</div>
 </section>
+
+<!-- Start category Area -->
+	<center>
+		<h2 class="pt-5">Largest Providers</h2>
+		<section class="category-area">
+			<div class="container"> <div class="col-12">
+				<div class="row justify-content-center">
+
+					<div class="col-lg-8 col-md-12  col-sm-12 ">
+						<div class="row">
+							<div class="col-lg-8 col-md-8 col-sm-8">
+								<div class="single-deal">
+									<div class="overlay"></div>
+									<img class="img-fluid w-100" src="img/ATT.png" alt="">
+									
+									<a class="">
+										<div class="deal-details">
+											<h6 class="deal-title">AT&T Internet and Tv</h6>
+										</div>
+									</a>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-4 ">
+								<div class="single-deal">
+									<div class="overlay"></div>
+									<img class="img-fluid w-100" src="img/spectrum.png" alt="">
+									<a  class="i" target="_blank">
+										<div class="deal-details">
+											<h6 class="deal-title">Spectrum</h6>
+										</div>
+									</a>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-4">
+								<div class="single-deal">
+									<div class="overlay"></div>
+									<img class="img-fluid w-100" src="img/xfinity.png" alt="">
+									<a class="">
+										<div class="deal-details">
+											<h6 class="deal-title">Xfinity</h6>
+										</div>
+									</a>
+								</div>
+							</div>
+							<div class="col-lg-8 col-md-8 col-sm-8">
+								<div class="single-deal">
+									<div class="overlay"></div>
+									<img class="img-fluid w-100" src="img/century.png" alt="">
+									<aclass="">
+										<div class="deal-details">
+											<h6 class="deal-title">CenturyLink</h6>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-4">
+						<div class="single-deal">
+							<div class="overlay"></div>
+							<img class="img-fluid w-100" src="img/Cox.png" alt="">
+							<a class="">
+								<div class="deal-details">
+									<h6 class="deal-title">Cox Communications</h6>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						<div class="single-deal">
+							<div class="overlay"></div>
+							<img class="img-fluid w-100" src="img/hugenet.png" alt="">
+							<a class="">
+								<div class="deal-details">
+									<h6 class="deal-title">hugenet</h6>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+						<div class="single-deal">
+							<div class="overlay"></div>
+							<img class="img-fluid w-100" src="img/visat.png" alt="">
+							<a class="">
+								<div class="deal-details">
+									<h6 class="deal-title">visat<br>-----<br>exede</h6>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+						<div class="single-deal">
+							<div class="overlay"></div>
+							<img class="img-fluid w-100" src="img/Frontier.png" alt="">
+							<a class="">
+								<div class="deal-details">
+									<h6 class="deal-title">Frontier Communications</h6>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div> </div>
+			</div>
+		</section>
+   </center>
 	<!-- start footer Area -->
 	<footer class="footer-area section_gap">
         <div class="container">
-            
-                <div class="col-lg-4  col-md-6 col-sm-6">
+            <div class="row" stle="color:black">
+                <div class="col-4  col-4 col-sm-4">
                     <div class="single-footer-widget">
                         <h6>Newsletter</h6>
                         <p>Stay update with our latest</p>
@@ -512,13 +528,18 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3  col-md-6 col-sm-6">
-                    
-                </div>
-                <div class="col-lg-2 col-md-6 col-sm-6">
-                    
-                </div>
+                <div class="col-lg-4  col-md-4 col-sm-4">
+					<div class="footer__text-widget">
+						<h5></h5>
+						<ul style="list-style: none">
+							<li><a href="aboutus.php">About Us</a></li>
+
+							<li><a href="terms_condictions.php">Privacy &amp; Terms</a></li>
+						</ul>
+					</div>
+				</div>
             </div>
+        </div>
             
         
     </footer>

@@ -17,7 +17,7 @@
     <!-- meta character set -->
     <meta charset="UTF-8">
     <!-- Site Title -->
-    <title>Karma Shop</title>
+    <title>broadbandmovers</title>
     <!--
 			CSS
 			============================================= -->
@@ -86,9 +86,9 @@
     color:#ff7101;
     text-decoration:none;
     }
-.banner-area{
+/* .banner-area{
 	background-attachment:fixed ;
-	}
+	} */
 .category-area{
 	width: 55%;
 	
@@ -129,17 +129,22 @@
                0 10px 10px rgba(0,0,0,.2),
                0 20px 20px rgba(0,0,0,.15);
 }
+.mynav{
+
+    border-top: 10px solid #fbb500;
+}
+
 
 
 </style>
 <body>
 
     <!-- Start Header Area -->
-	<header class="header_area sticky-header">
+	<!-- <header class="header_area sticky-header">
 		<div class="main_menu">
         <nav class="navbar navbar-expand-lg navbar-light main_box">
 				<div class="container">
-					<!-- Brand and toggle get grouped for better mobile display -->
+				
 					<a class="navbar-brand logo_h" href="index.html"><img src="img/logo.png" alt=""></a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 					 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -147,19 +152,12 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<!-- Collect the nav links, forms, and other content for toggling -->
+
 					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
 						<ul class="nav navbar-nav menu_nav ml-auto">
 							<li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
 							<li class="nav-item active"><a class="nav-link" href="index.html">About Us</a></li>
-							<!-- <li class="nav-item submenu dropdown">
-								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-								 aria-expanded="false">All Proviers</a>
-								<ul class="dropdown-menu">
-									<li class="nav-item"><a class="nav-link" href="blog.html">provider1</a></li>
-									<li class="nav-item"><a class="nav-link" href="single-blog.html">Provider2</a></li>
-								</ul>
-							</li> -->
+					
 							
 							
 						</ul>
@@ -183,7 +181,56 @@
 				</form>
 			</div>
 		</div>
-	</header>
+	</header> -->
+    <div class="header_area   bold shadow sticky mynav"   >
+		<div class="">
+			<nav class="navbar navbar-expand-lg navbar-light bg-light" style="  background-image: linear-gradient(to right, #ffffff , #ffffff, #ffffff ); ">
+				<div class="container-fluid">
+				
+				<div class="pl-5">
+					<a class="navbar-brand logo_h" href="index.html"><img src="img/logo.png" alt=""></a>
+		        </div>
+		
+							<div class="pr-5">
+								<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+								aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+								   <span class="icon-bar"></span>
+								   <span class="icon-bar"></span>
+								   <span class="icon-bar"></span>
+							   </button>
+			   
+							   
+							   <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+								   <ul class="nav navbar-nav menu_nav ml-auto" >
+									   <li class="nav-item active "><a class="nav-link shadow-bottom nav-btn" href="index.html" style="font-size: 20px!important;"><b>Home</b></a></li>
+									   <li class="nav-item active  	" ><a class="nav-link nav-btn " href="aboutus.php"  style="font-size: 20px!important;"><b>About Us</b></a></li>
+							   
+									   
+									   
+								   </ul>
+								   <ul class="nav navbar-nav navbar-right">
+									   
+									   <li class="nav-item">
+										   <button class="search"><span class="lnr lnr-magnifier" id="search"></span></button>
+									   </li>
+								   </ul>
+							   </div>
+								
+							</div>
+				</div>
+			</nav>
+		</div>
+		<div class="search_input" id="search_input_box">
+			<div class="container">
+				<form class="d-flex justify-content-between" action="blog.php">
+					<input  name="zipcode" type="text" class="form-control" id="search_input" placeholder="Search Here" >
+					<button type="submit" class="btn"></button>
+					<span class="lnr lnr-cross" id="close_search" title="Close Search"></span>
+				</form>
+			</div>
+		</div>
+		
+	</div>
 	<!-- End Header Area -->
 
     <!-- Start Banner Area -->
@@ -215,18 +262,24 @@
     <!-- End Banner Area -->
 <div class="container">
 <div class="row">
-<div class="col-lg-12 col-md-12 col-sm-8 pt-5 bg-light" >
-            <h2 class="pb-3">About us</h2>
-        <p align="justify">
-            Life of every person is full of drama and seriousness and we understand that you really would be wishing for escaping from this hardship, but it is sad to say that it is very hard to manage the chores therefor we are here to provide entertainment packages that would make your life little entertained and satisfied. <br><br>
-        Finding the best viewing option is a very difficult task but we make it very much easy with our expertise. broadbandmovers.com is the best source that you can opt for as our mission is to provide the best options so that our customers would be never be disappointed with us. We examine and analyze television, internet, and streaming platforms, cutting through the terminology to provide you with straightforward recommendations and sound advice. Through our high-quality services and best advice according to your taste, we would make sure that you get the best from us as our customers are our priority and getting good word of mouth encourages us to give more value to our customers.<br><br>
-        Searching is not been liked by most people as it is time-consuming and sometimes it becomes frustrating when you do not get what you wish for. Well, we cannot help you with all the searching but being internet and TV affiliated site, we would investigate tech and television services with our best scrutinizing ability so that we could provide things on spot for what you would have wished for as we would make sure to take care our your taste.<br>
-        There have been trends that are been followed by the people and when it comes to entertainment, there are many entertainment products that are worth a try as they can high-level benefits set for you and can catch your attention. We want to discover the latest, most genuine TV, internet, and streaming deals and post them like spoilers after a binge so that your needs could be fulfilled at first.<br><br>
-        With the revolution of time, the preference of the people are changing, and matching with that is a very tough job. With our expertise and technology, we guarantee you to provide the finest services that would give you the pleasure of entertainment even if you are not in a good mood. We know our responsibilities and we know how to fulfill them.<br><br>
+        <div class="col-lg-12 col-md-12 col-sm-8 pt-5 bg-light" >
+                    <h2 class="pb-3">About us</h2>
+                <p align="justify">
+                    Life of every person is full of drama and seriousness and we understand that you really would be wishing for escaping from this hardship, but it is sad to say that it is very hard to manage the chores therefor we are here to provide entertainment packages that would make your life little entertained and satisfied. <br><br>
+                Finding the best viewing option is a very difficult task but we make it very much easy with our expertise. broadbandmovers.com is the best source that you can opt for as our mission is to provide the best options so that our customers would be never be disappointed with us. We examine and analyze television, internet, and streaming platforms, cutting through the terminology to provide you with straightforward recommendations and sound advice. Through our high-quality services and best advice according to your taste, we would make sure that you get the best from us as our customers are our priority and getting good word of mouth encourages us to give more value to our customers.<br><br>
+                Searching is not been liked by most people as it is time-consuming and sometimes it becomes frustrating when you do not get what you wish for. Well, we cannot help you with all the searching but being internet and TV affiliated site, we would investigate tech and television services with our best scrutinizing ability so that we could provide things on spot for what you would have wished for as we would make sure to take care our your taste.<br>
+                There have been trends that are been followed by the people and when it comes to entertainment, there are many entertainment products that are worth a try as they can high-level benefits set for you and can catch your attention. We want to discover the latest, most genuine TV, internet, and streaming deals and post them like spoilers after a binge so that your needs could be fulfilled at first.<br><br>
+                With the revolution of time, the preference of the people are changing, and matching with that is a very tough job. With our expertise and technology, we guarantee you to provide the finest services that would give you the pleasure of entertainment even if you are not in a good mood. We know our responsibilities and we know how to fulfill them.<br><br>
 
-        </p>
+                </p>
 
+        </div>
 </div>
+<div class="row">
+    <div class="col-12">
+
+    
+    </div>
 </div>
 
 </div>
