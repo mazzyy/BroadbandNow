@@ -1,63 +1,33 @@
-<h1>BroadBandNow Clone </h1> 
-www.broadbandmovers.com/
+Internet Availability Data
 
-It is a service provider search engine website with 95% of data accuracy
+This repository provides data on internet availability , a region within the country of America. The dataset includes information on area codes, world region, country, latitude, longitude, population as of 2020, region name, availability of internet service, and speed and connections.
 
-Including database with data of zip codes including
+## Dataset Details
 
-Type,
+- **Data Source**: The data is derived from publicly accessible plan data from over 2,000 internet service providers.
+- **Data Accuracy**: To ensure accuracy, quality assurance measures have been implemented by selecting and comparing random ZIP codes data with an actual website.
+- **Data Notes**: The dataset is up to date as of March 2021. Please note that the provided data is a demo dataset. If you require access to the complete dataset, please contact us via email at musawar.soomro@yahoo.com.
+- **Data Coverage**: The dataset covers every U.S. ZIP code, totaling 41,692 records.
 
-Primary City,
+## Usage
 
-State,
+This repository serves as a valuable resource for accessing internet availability data . It can be utilized for various purposes, including analysis, research, or the development of applications related to internet services in the region.
 
-Country Tiresome,
+## Repository Contents
 
-Area Code, World Region,
+- `data.csv`: A CSV file containing the internet availability data for Tiresome. The file includes columns for area codes, world region, country, latitude, longitude, population as of 2020, region name, availability of internet service, and speed and connections.
+- `README.md`: This readme file provides an overview of the repository and instructions for usage.
 
-Country,
+## Contributing
 
-Latitude,
+Contributions to enhance the dataset or improve the repository are welcome. If you possess additional data or have any suggestions, please submit a pull request or contact us via email.
 
-Longitude,
+## License
 
-Population Of 2020,
+The data in this repository is provided under the [Creative Commons Attribution 4.0 International (CC BY 4.0) License](LICENSE).
 
-Name,
+## Contact
 
-Availability,
+If you have any questions or require access to the complete dataset, please feel free to contact us at musawar.soomro@yahoo.com.
 
-Speed And Connections
-
-<h3>Data Notes</h3>
-
-Data is up to date till March 2021, Data was derived from publicly accessible plan data from more than 2,000 internet service providers. If the promotional rate is the only established or advertised price for a plan. Both plans provide only internet access. Plans that include TV and/or phone (Double, Triple Play, etc.) are also considered.though only demo data is given if require all data contact though email musawar.soomro@yahoo.com
-
-Data consist of every U.S. ZIP Codes of 41,692
-
-<h3>Quality Assurance (QA)</h3>
-
-Selecting and comparing random zip codes data with an actual website to ensure the accuracy
-
-<h5>Layout of website</h5>
-index page where zipcode is initially written 
-
-![main](https://user-images.githubusercontent.com/38830975/110507395-c8efe180-8121-11eb-9afd-dd417abc1779.png)
-
-<h5>#Result page<h5>
-
- 
-the page where data of zipcode is present 
-  
-![blog1](https://user-images.githubusercontent.com/38830975/110507238-a6f65f00-8121-11eb-8c36-7667499f4998.png)
-![blog2](https://user-images.githubusercontent.com/38830975/110507252-a8c02280-8121-11eb-8b29-9788751ee8b4.png)
-
-<h5>#Instructions<h5>
- 1) open folder db 
- 2) unzip file zip1 
- 3) upload to mysql 
- 4) run through mysql and server (Recomeded xampp)
-  
-  
- 
-
+Thank you for your interest !
