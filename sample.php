@@ -383,7 +383,7 @@ h1:after {
 </style>
 
 <div class="one">
-  <h1>SARA THE GREAT</h1>
+  <h1>Sample</h1>
 </div>
 
 
